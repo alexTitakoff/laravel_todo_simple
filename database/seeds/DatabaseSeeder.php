@@ -14,7 +14,9 @@ class DatabaseSeeder extends Seeder
 
     	Eloquent::unguard(); 
 
-    	$this->call(UsersTableSeeder::class) ;
+    	$this->call(UsersTableSeeder::class);
+    	$this->call(ItemsTableSeeder::class) ;
+
     }
 
 
@@ -22,28 +24,4 @@ class DatabaseSeeder extends Seeder
 
 
 
-
-// class UsersTableSeeder extends Seeder
-// {
-
-// 	public function run()
-// 	{
-// 		DB::table('users') ->delete();
-
-// 		$users  = array(
-// 			array(
-
-// 				'name' => 'Alex',
-// 				'password' => Hash::make('alex'),
-// 				'email' => 'mymail@yandex.ru'				
-// 				)
-// 			);
-
-
-
-// 		DB::table('users') ->insert($users);
-
-
-// 	}
-// }
 

@@ -19,8 +19,16 @@ class UsersTableSeeder extends Seeder
     			'name' => 'Alex',
     			'password' => Hash::make('alex'),
     			'email' => 'mymail@yandex.ru'				
-    			)
-    		);
+    			),
+
+            array(
+
+                'name' => 'Emmet',
+                'password' => Hash::make('asdfsdf3234'),
+                'email' => 'em@yandex.ru'               
+                )
+
+            );
 
 
 
