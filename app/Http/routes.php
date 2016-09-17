@@ -17,6 +17,11 @@
 
 
 
+use App\Http\Controllers;
+use App\Http\Controllers\Auth;
+
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@getIndex'));
+Route::get('/login', array('as' => 'login', 'uses' => 'Auth\AuthController@getLogin'));
+Route::post('login', array('uses' => 'Auth\AuthController@getLogin'));
 
 
