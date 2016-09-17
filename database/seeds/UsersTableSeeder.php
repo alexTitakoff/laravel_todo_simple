@@ -1,34 +1,34 @@
-<?php 
-
-
-/**
-*
-*/
-
+<?php
 
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
 {
-	
-	public function run()
-	{
-		DB::table('users') ->delete();
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+    	DB::table('users') ->delete();
 
-		$users  = array(
-			array(
+    	$users  = array(
+    		array(
 
-				'name' => 'Alex',
-				'password' => Hash::make('alex'),
-				'email' => 'mymail@yandex.ru'				
-				)
-			);
-
-
-
-		DB:table('users') ->insert($users);
+    			'name' => 'Alex',
+    			'password' => Hash::make('alex'),
+    			'email' => 'mymail@yandex.ru'				
+    			)
+    		);
 
 
-	}
+
+    	DB::table('users') ->insert($users);
+    }
 }
+
+
+
+
 
